@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Food • ร้านอาหาร</title>
+
+    <link
+        rel="stylesheet"
+        href="food.css"
+    >
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <header class="navbar">
+
+        <a
+            class="logo"
+            href="#home"
+        >
+            <span class="logo-icon">🍽️</span>
+
+            <span class="logo-text">
+                <b>food</b>
+                <small>อาหาร</small>
+            </span>
+        </a>
+
+        <nav class="nav-menu">
+
+            <a
+                href="#home"
+                data-page="home"
+            >
+                หน้าแรก
+            </a>
+
+            <a
+                href="#products"
+                data-page="products"
+            >
+                สินค้า
+            </a>
+
+            <a
+                href="#cart"
+                data-page="cart"
+            >
+                ตะกร้าสินค้า
+            </a>
+
+        </nav>
+
+        <a
+            class="cart-button"
+            href="#cart"
+        >
+            🛒
+            <span id="cartCount">0</span>
+        </a>
+
+    </header>
+
+
+    <!-- =========================
+         HOME PAGE
+    ========================== -->
+
+    <section
+        id="page-home"
+        class="page"
+    >
+
+        <main>
+
+            <section class="hero">
+
+                <div class="hero-content">
+
+                    <div class="small-title">
+                        ✦ HOMEMADE • FRESH • DELICIOUS
+                    </div>
+
+                    <h1>
+                        อร่อยง่าย ๆ
+                        <br>
+                        <span>ในทุกมื้อ</span>
+                    </h1>
+
+                    <p>
+                        รวมอาหารคาวยอดนิยมที่คัดสรรมาเพื่อคุณ
+                        อิ่มอร่อยในราคาสบายกระเป๋า
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a
+                            class="primary-btn"
+                            href="#products"
+                        >
+                            ดูเมนูอาหาร →
+                        </a>
+
+                        <a
+                            class="secondary-btn"
+                            href="#cart"
+                        >
+                            🛒 ตะกร้าของฉัน
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="hero-image">
+
+                    <div class="circle-bg"></div>
+
+                    <div class="food-main">
+                        🍛
+                    </div>
+
+                    <div class="floating-card card-one">
+                        ⭐ 5.0
+                    </div>
+
+                    <div class="floating-card card-two">
+                        🔥 ร้านยอดนิยม
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- WHY US -->
+
+            <section class="section">
+
+                <div class="section-heading">
+
+                    <div>
+                        <span>WHY US</span>
+
+                        <h2>
+                            สั่งง่าย ส่งคุ้ม
+                        </h2>
+                    </div>
+
+                    <p>
+                        ซื้อครบ ฿200 ส่งฟรี
+                    </p>
+
+                </div>
+
+
+                <div class="categories">
+
+                    <div class="category">
+                        <span>🚚</span>
+                        <b>ส่งฟรี ฿200</b>
+                        <small>ครบ 200 บาท ส่งฟรี</small>
+                    </div>
+
+                    <div class="category">
+                        <span>👤</span>
+                        <b>สมาชิก</b>
+                        <small>ลดทันที ฿20</small>
+                    </div>
+
+                    <div class="category">
+                        <span>🍱</span>
+                        <b>เมนูหลากหลาย</b>
+                        <small>อาหาร 9 เมนู</small>
+                    </div>
+
+                    <div class="category">
+                        <span>⚡</span>
+                        <b>สั่งง่าย</b>
+                        <small>เพิ่มลงตะกร้าได้ทันที</small>
+                    </div>
+
+                    <div class="category">
+                        <span>❤️</span>
+                        <b>สดใหม่</b>
+                        <small>คัดสรรเพื่อคุณ</small>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </section>
+
+
+    <!-- =========================
+         PRODUCTS PAGE
+    ========================== -->
+
+    <section
+        id="page-products"
+        class="page"
+    >
+
+        <main>
+
+            <section class="section">
+
+                <div class="section-heading">
+
+                    <div>
+                        <span>OUR MENU</span>
+
+                        <h2>
+                            เมนูอาหาร
+                        </h2>
+                    </div>
+
+                    <p>
+                        เลือกเมนูที่คุณชื่นชอบ
+                    </p>
+
+                </div>
+
+
+                <!-- SEARCH -->
+
+                <div class="search-area">
+
+                    <div class="search">
+
+                        <span>⌕</span>
+
+                        <input
+                            id="search"
+                            type="text"
+                            placeholder="ค้นหาเมนูอาหาร..."
+                        >
+
+                    </div>
+
+
+                    <div class="filters">
+
+                        <button
+                            type="button"
+                            onclick="setFilter('ทั้งหมด')"
+                        >
+                            ทั้งหมด
+                        </button>
+
+                        <button
+                            type="button"
+                            onclick="setFilter('อาหารจานเดียว')"
+                        >
+                            จานเดียว
+                        </button>
+
+                        <button
+                            type="button"
+                            onclick="setFilter('เส้นและก๋วยเตี๋ยว')"
+                        >
+                            เมนูเส้น
+                        </button>
+
+                        <button
+                            type="button"
+                            onclick="setFilter('อาหารกับข้าว')"
+                        >
+                            กับข้าว
+                        </button>
+
+                        <button
+                            type="button"
+                            onclick="setFilter('ของทอด')"
+                        >
+                            ของทอด
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUCT LIST -->
+
+                <div
+                    id="products"
+                    class="product-grid"
+                ></div>
+
+            </section>
+
+        </main>
+
+    </section>
+
+
+    <!-- =========================
+         CART PAGE
+    ========================== -->
+
+    <section
+        id="page-cart"
+        class="page"
+    >
+
+        <main>
+
+            <section class="checkout">
+
+                <div class="checkout-header">
+
+                    <span>YOUR ORDER</span>
+
+                    <h2>
+                        ตะกร้าสินค้า
+                    </h2>
+
+                    <p>
+                        ตรวจสอบรายการอาหารก่อนสั่งซื้อ
+                    </p>
+
+                </div>
+
+
+                <div class="checkout-grid">
+
+                    <!-- CART ITEMS -->
+
+                    <div class="panel">
+
+                        <h3>
+                            🛒 รายการอาหาร
+                        </h3>
+
+                        <div id="cartItems"></div>
+
+                    </div>
+
+
+                    <!-- SUMMARY -->
+
+                    <div class="panel">
+
+                        <div class="summary-top">
+
+                            <span>
+                                ORDER SUMMARY
+                            </span>
+
+                            <h3>
+                                สรุปคำสั่งซื้อ
+                            </h3>
+
+                        </div>
+
+
+                        <!-- MEMBER -->
+
+                        <div class="member-box">
+
+                            <div class="member-icon">
+                                👤
+                            </div>
+
+                            <div class="member-info">
+
+                                <b id="memberStatus">
+                                    ไม่ได้เป็นสมาชิก
+                                </b>
+
+                                <small id="memberMessage">
+                                    สมัครสมาชิกเพื่อรับส่วนลด ฿20
+                                </small>
+
+                            </div>
+
+                            <button
+                                id="memberButton"
+                                class="member-btn"
+                                type="button"
+                                onclick="toggleMember()"
+                            >
+                                สมัครสมาชิก
+                            </button>
+
+                        </div>
+
+
+                        <!-- PRICE -->
+
+                        <div class="sumrow">
+
+                            <span>
+                                ราคาสินค้า
+                            </span>
+
+                            <b id="subtotal">
+                                ฿0.00
+                            </b>
+
+                        </div>
+
+
+                        <div class="sumrow discount">
+
+                            <span>
+                                ส่วนลดสมาชิก
+                            </span>
+
+                            <b id="discount">
+                                -฿0.00
+                            </b>
+
+                        </div>
+
+
+                        <div class="sumrow">
+
+                            <span>
+                                ค่าจัดส่ง
+                            </span>
+
+                            <b id="delivery">
+                                ฿40
+                            </b>
+
+                        </div>
+
+
+                        <div class="free">
+                            🚚 ซื้อครบ ฿200 จัดส่งฟรี
+                        </div>
+
+
+                        <div class="sumrow total">
+
+                            <span>
+                                ยอดสุทธิ
+                            </span>
+
+                            <b id="total">
+                                ฿0.00
+                            </b>
+
+                        </div>
+
+
+                        <button
+                            class="order"
+                            type="button"
+                            onclick="confirmOrder()"
+                        >
+                            ยืนยันการสั่งซื้อ →
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+        Food • อร่อยง่าย ๆ ในทุกมื้อ
+    </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        /* =========================
+           PRODUCT DATA
+        ========================== */
+
+        const products = [
+            {
+                id: 1,
+                name: "กะเพราหมูกรอบไข่ดาว",
+                price: 65,
+                category: "อาหารจานเดียว",
+                image: "https://i.pinimg.com/736x/d0/50/67/d05067e7a1618c4d58c0f75cebbce2fb.jpg",
+                description: "กะเพราหมูกรอบไข่ดาว"
+            },
+
+            {
+                id: 2,
+                name: "ข้าวมันไก่",
+                price: 55,
+                category: "อาหารจานเดียว",
+                image: "https://static.thairath.co.th/media/dFQROr7oWzulq5Fa6rpOetuLxWtDW4pGVxTIT2bhWuo8KUmcxGVIisEysxd9YsSVQ0b.webp",
+                description: "ข้าวมันหอม ๆ พร้อมไก่นุ่ม"
+            },
+
+            {
+                id: 3,
+                name: "ข้าวผัดกุ้ง",
+                price: 70,
+                category: "อาหารจานเดียว",
+                image: "https://api2.krua.co/wp-content/uploads/2025/01/RT1863_ImageBanner_1140x507.jpg",
+                description: "ข้าวผัดหอมกระทะพร้อมกุ้งสด"
+            },
+
+            {
+                id: 4,
+                name: "ผัดไทยกุ้งสด",
+                price: 80,
+                category: "เส้นและก๋วยเตี๋ยว",
+                image: "https://images.unsplash.com/photo-1559314809-0d155014e29e?auto=format&fit=crop&w=900&q=85",
+                description: "เส้นเหนียวนุ่มผัดซอสสูตรพิเศษ"
+            },
+
+            {
+                id: 5,
+                name: "ก๋วยเตี๋ยวต้มยำ",
+                price: 60,
+                category: "เส้นและก๋วยเตี๋ยว",
+                image: "https://www.ryoiireview.com/upload/article/202306/1687248723_cfc5baa0a18eb43f6314784cefd4c4d4.png",
+                description: "รสต้มยำเข้มข้น หอมมะนาว"
+            },
+
+            {
+                id: 6,
+                name: "ต้มยำกุ้ง",
+                price: 120,
+                category: "อาหารกับข้าว",
+                image: "https://www.senate.go.th/assets/portals/386/fileups/676/images/%E0%B8%88%E0%B8%B1%E0%B8%99%E0%B8%97%E0%B8%A3%E0%B8%B2%20%E0%B8%A7%E0%B8%B8%E0%B8%92%E0%B8%B4%E0%B8%AA%E0%B8%A0%E0%B8%B2%E0%B9%84%E0%B8%97%E0%B8%A2/1Issue/12-67%20tomyumkung/eBook_tomyam_Page_09.jpg",
+                description: "ต้มยำกุ้งรสจัดจ้านแบบไทย"
+            },
+
+            {
+                id: 7,
+                name: "ไก่ทอดกรอบ",
+                price: 75,
+                category: "ของทอด",
+                image: "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=900&q=85",
+                description: "ไก่ทอดกรอบนอกนุ่มใน"
+            },
+
+            {
+                id: 8,
+                name: "ส้มตำไทย",
+                price: 50,
+                category: "อาหารกับข้าว",
+                image: "https://mpics.mgronline.com/pics/Images/560000003554201.JPEG",
+                description: "ส้มตำไทยรสกลมกล่อม"
+            },
+
+            {
+                id: 9,
+                name: "คอหมูย่าง",
+                price: 90,
+                category: "อาหารกับข้าว",
+                image: "https://1376delivery.com/productimages/3658_.jpg",
+                description: "คอหมูย่างหอม ๆ เสิร์ฟพร้อมน้ำจิ้ม"
+            }
+        ];
+
+
+        /* =========================
+           CART
+        ========================== */
+
+        let cart = JSON.parse(
+            localStorage.getItem("foodCart") || "[]"
+        );
+
+        let filter = "ทั้งหมด";
+
+
+        function save() {
+            localStorage.setItem(
+                "foodCart",
+                JSON.stringify(cart)
+            );
+        }
+
+
+        function count() {
+            return cart.reduce(
+                (sum, item) => sum + item.quantity,
+                0
+            );
+        }
+
+
+        function updateCount() {
+
+            document
+                .querySelectorAll("#cartCount")
+                .forEach(element => {
+                    element.textContent = count();
+                });
+
+        }
+
+
+        /* =========================
+           PRODUCT DISPLAY
+        ========================== */
+
+        function setFilter(value) {
+
+            filter = value;
+
+            display();
+
+        }
+
+
+        function display() {
+
+            const area =
+                document.getElementById("products");
+
+            if (!area) {
+                return;
+            }
+
+            const keyword =
+                document
+                    .getElementById("search")
+                    ?.value
+                    .trim()
+                    .toLowerCase() || "";
+
+
+            const result = products.filter(product => {
+
+                const matchFilter =
+                    filter === "ทั้งหมด" ||
+                    product.category === filter;
+
+                const matchSearch =
+                    product.name
+                        .toLowerCase()
+                        .includes(keyword);
+
+                return matchFilter && matchSearch;
+
+            });
+
+
+            if (!result.length) {
+
+                area.innerHTML = `
+                    <div class="no-product">
+                        <div>🍽️</div>
+                        <h3>ไม่พบเมนูอาหาร</h3>
+                        <p>ลองค้นหาด้วยคำอื่น</p>
+                    </div>
+                `;
+
+                return;
+            }
+
+
+            area.innerHTML = result
+                .map(product => {
+
+                    return `
+                        <article class="product-card">
+
+                            <div class="product-image">
+
+                                <img
+                                    src="${product.image}"
+                                    alt="${product.name}"
+                                    onerror="
+                                        this.src='https://placehold.co/600x400?text=Food'
+                                    "
+                                >
+
+                                <span class="product-category">
+                                    ${product.category}
+                                </span>
+
+                            </div>
+
+
+                            <div class="product-content">
+
+                                <h3>
+                                    ${product.name}
+                                </h3>
+
+                                <p>
+                                    ${product.description}
+                                </p>
+
+
+                                <div class="product-bottom">
+
+                                    <strong>
+                                        ฿${product.price}
+                                    </strong>
+
+                                    <button
+                                        type="button"
+                                        onclick="addToCart(${product.id})"
+                                    >
+                                        + เพิ่ม
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+                    `;
+
+                })
+                .join("");
+
+        }
+
+
+        /* =========================
+           CART FUNCTIONS
+        ========================== */
+
+        function addToCart(id) {
+
+            const product =
+                products.find(item => item.id === id);
+
+            if (!product) {
+                return;
+            }
+
+
+            const item =
+                cart.find(item => item.id === id);
+
+
+            if (item) {
+
+                item.quantity++;
+
+            } else {
+
+                cart.push({
+                    ...product,
+                    quantity: 1
+                });
+
+            }
+
+
+            save();
+            updateCount();
+            renderCart();
+
+        }
+
+
+        function plus(id) {
+
+            const item =
+                cart.find(item => item.id === id);
+
+            if (!item) {
+                return;
+            }
+
+            item.quantity++;
+
+            save();
+            updateCount();
+            renderCart();
+
+        }
+
+
+        function minus(id) {
+
+            const item =
+                cart.find(item => item.id === id);
+
+            if (!item) {
+                return;
+            }
+
+
+            if (item.quantity > 1) {
+
+                item.quantity--;
+
+            } else {
+
+                cart =
+                    cart.filter(item => item.id !== id);
+
+            }
+
+
+            save();
+            updateCount();
+            renderCart();
+
+        }
+
+
+        function removeItem(id) {
+
+            cart =
+                cart.filter(item => item.id !== id);
+
+            save();
+            updateCount();
+            renderCart();
+
+        }
+
+
+        /* =========================
+           MEMBERSHIP
+        ========================== */
+
+        function isMember() {
+
+            return (
+                localStorage.getItem("isMember") === "true"
+            );
+
+        }
+
+
+        function toggleMember() {
+
+            localStorage.setItem(
+                "isMember",
+                String(!isMember())
+            );
+
+            renderCart();
+
+        }
+
+
+        /* =========================
+           RENDER CART
+        ========================== */
+
+        function renderCart() {
+
+            const area =
+                document.getElementById("cartItems");
+
+
+            if (!area) {
+
+                updateCount();
+                return;
+
+            }
+
+
+            if (!cart.length) {
+
+                area.innerHTML = `
+                    <div class="empty">
+
+                        <div class="empty-icon">
+                            🛒
+                        </div>
+
+                        <h3>
+                            ตะกร้าของคุณยังว่าง
+                        </h3>
+
+                        <p>
+                            ไปเลือกอาหารที่หน้าสินค้าได้เลย
+                        </p>
+
+                        <a
+                            class="back"
+                            href="#products"
+                        >
+                            ไปหน้าสินค้า →
+                        </a>
+
+                    </div>
+                `;
+
+                calc();
+                updateCount();
+
+                return;
+
+            }
+
+
+            area.innerHTML = cart
+                .map(item => {
+
+                    return `
+                        <div class="cart-item">
+
+                            <div class="cart-img">
+
+                                <img
+                                    src="${item.image}"
+                                    alt="${item.name}"
+                                    onerror="
+                                        this.src='https://placehold.co/600x400?text=Food'
+                                    "
+                                >
+
+                            </div>
+
+
+                            <div class="cart-info">
+
+                                <b>
+                                    ${item.name}
+                                </b>
+
+                                <span>
+                                    ฿${item.price}
+                                </span>
+
+                            </div>
+
+
+                            <div class="qty">
+
+                                <button
+                                    type="button"
+                                    onclick="minus(${item.id})"
+                                >
+                                    −
+                                </button>
+
+                                <b>
+                                    ${item.quantity}
+                                </b>
+
+                                <button
+                                    type="button"
+                                    onclick="plus(${item.id})"
+                                >
+                                    +
+                                </button>
+
+                            </div>
+
+
+                            <b class="cart-price">
+                                ฿${(
+                                    item.price *
+                                    item.quantity
+                                ).toFixed(2)}
+                            </b>
+
+
+                            <button
+                                class="remove"
+                                type="button"
+                                onclick="removeItem(${item.id})"
+                                aria-label="ลบสินค้า"
+                            >
+                                ×
+                            </button>
+
+                        </div>
+                    `;
+
+                })
+                .join("");
+
+
+            calc();
+            updateCount();
+
+        }
+
+
+        /* =========================
+           PRICE CALCULATION
+        ========================== */
+
+        function calc() {
+
+            const subtotal =
+                cart.reduce(
+                    (sum, item) =>
+                        sum +
+                        item.price *
+                        item.quantity,
+                    0
+                );
+
+
+            const member = isMember();
+
+
+            const discount =
+                member && subtotal > 0
+                    ? 20
+                    : 0;
+
+
+            const shipping =
+                subtotal >= 200
+                    ? 0
+                    : 40;
+
+
+            const total =
+                Math.max(
+                    0,
+                    subtotal -
+                    discount +
+                    shipping
+                );
+
+
+            function setText(id, value) {
+
+                const element =
+                    document.getElementById(id);
+
+                if (element) {
+                    element.textContent = value;
+                }
+
+            }
+
+
+            setText(
+                "subtotal",
+                "฿" + subtotal.toFixed(2)
+            );
+
+
+            setText(
+                "discount",
+                "-฿" + discount.toFixed(2)
+            );
+
+
+            setText(
+                "delivery",
+                shipping === 0
+                    ? "ฟรี"
+                    : "฿" + shipping
+            );
+
+
+            setText(
+                "total",
+                "฿" + total.toFixed(2)
+            );
+
+
+            const memberStatus =
+                document.getElementById(
+                    "memberStatus"
+                );
+
+            const memberMessage =
+                document.getElementById(
+                    "memberMessage"
+                );
+
+            const memberButton =
+                document.getElementById(
+                    "memberButton"
+                );
+
+
+            if (memberStatus) {
+
+                memberStatus.textContent =
+                    member
+                        ? "เป็นสมาชิกแล้ว ✓"
+                        : "ไม่ได้เป็นสมาชิก";
+
+            }
+
+
+            if (memberMessage) {
+
+                memberMessage.textContent =
+                    member
+                        ? "ได้รับส่วนลด ฿20 ทุกออเดอร์"
+                        : "สมัครสมาชิกเพื่อรับส่วนลด ฿20";
+
+            }
+
+
+            if (memberButton) {
+
+                memberButton.textContent =
+                    member
+                        ? "ยกเลิกสมาชิก"
+                        : "สมัครสมาชิก";
+
+
+                memberButton.className =
+                    "member-btn" +
+                    (member ? " active" : "");
+
+            }
+
+        }
+
+
+        /* =========================
+           CONFIRM ORDER
+        ========================== */
+
+        function confirmOrder() {
+
+            if (!cart.length) {
+
+                alert(
+                    "กรุณาเลือกอาหารก่อนสั่งซื้อ"
+                );
+
+                return;
+
+            }
+
+
+            alert(
+                "สั่งซื้อเรียบร้อยแล้ว ขอบคุณครับ ❤️"
+            );
+
+        }
+
+
+        /* =========================
+           PAGE NAVIGATION
+        ========================== */
+
+        function showPage(page) {
+
+            document
+                .querySelectorAll(".page")
+                .forEach(element => {
+                    element.style.display = "none";
+                });
+
+
+            const pageElement =
+                document.getElementById(
+                    "page-" + page
+                );
+
+
+            if (pageElement) {
+
+                pageElement.style.display = "block";
+
+            }
+
+
+            document
+                .querySelectorAll("[data-page]")
+                .forEach(link => {
+
+                    link.classList.toggle(
+                        "active",
+                        link.dataset.page === page
+                    );
+
+                });
+
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+
+            if (page === "products") {
+                display();
+            }
+
+
+            if (page === "cart") {
+                renderCart();
+                calc();
+            }
+
+
+            updateCount();
+
+        }
+
+
+        function route() {
+
+            let page =
+                location.hash.replace("#", "") ||
+                "home";
+
+
+            if (
+                ![
+                    "home",
+                    "products",
+                    "cart"
+                ].includes(page)
+            ) {
+
+                page = "home";
+
+            }
+
+
+            showPage(page);
+
+        }
+
+
+        /* =========================
+           EVENTS
+        ========================== */
+
+        window.addEventListener(
+            "hashchange",
+            route
+        );
+
+
+        document
+            .getElementById("search")
+            ?.addEventListener(
+                "input",
+                display
+            );
+
+
+        /* =========================
+           START APP
+        ========================== */
+
+        updateCount();
+        route();
+
+    </script>
+
+</body>
+
+</html>
